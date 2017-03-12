@@ -25,10 +25,10 @@ body {
 .bg {
 	width: 90vw; height: 75vh;
 	max-width: 1200px;
+	margin: auto;
 	position: relative;
 	top: 50vh;
 	transform: translateY(-50%);
-	margin: auto;
 	background: rgba($bone, 0.4);
 	padding: 70px 100px;
 	h1 {
@@ -44,16 +44,80 @@ body {
 					 0 0 12px #000000,
 					 0 0 12px #000000;
 	}
+	.session {
+		text-align: center;
+		margin-top: 30px;
+		font-size: 1.5rem;
+		color: $darkpurple;
+		font-weight: 900;
+		text-shadow: 0 0 5px $bone,
+					 0 0 5px $bone,
+					 0 0 15px $bone;
+	}
+	.timer {
+		text-align: center;
+		padding: 70px 0 0;
+		font-size: 2rem;
+		color: $bone;
+		#minute{
+			padding: 50px 80px;
+			background: rgba($brownish, 0.6);
+			margin-right: 50px;
+		}
+		#seconds{
+			padding: 50px 80px;
+			background: rgba($brownish, 0.6);
+			margin-left: 50px;
+		}
+		#colon{
+			color: $raspberry;
+		}
+	}
 
 }
 
 @media (max-width: 540px) {
 	.bg {
 		height: 90vh;
-		background: rgba($bone, 0.4);
 		padding: 70px 50px;
 		h1 {
 			font-size: 1.2rem;
 		}
+		.session {
+			font-size: 1rem;
+		}
+		.timer {
+			font-size: 1rem;
+			padding: 30px 0 0;
+			#minute{
+				padding: 10px 20px;
+				margin-right: 20px;
+			}
+			#seconds{
+				padding: 10px 20px;
+				margin-left: 20px;
+			}
+		}
 	}
+}
+
+@media (min-width: 541px) and (max-width: 768px) {
+	.bg {
+		h1 {
+			font-size: 2rem;
+		}
+		.timer {
+			font-size: 1rem;
+			padding: 45px 0 0;
+			#minute{
+				padding: 20px 40px;
+				margin-right: 30px;
+			}
+			#seconds{
+				padding: 20px 40px;
+				margin-left: 30px;
+			}
+		}
+	}
+
 }

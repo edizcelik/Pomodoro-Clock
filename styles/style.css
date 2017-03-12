@@ -17,11 +17,11 @@ body {
   width: 90vw;
   height: 75vh;
   max-width: 1200px;
+  margin: auto;
   position: relative;
   top: 50vh;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  margin: auto;
   background: rgba(228, 234, 204, 0.4);
   padding: 70px 100px; }
   .bg h1 {
@@ -32,11 +32,56 @@ body {
     border-bottom: 3px solid #689888;
     color: #e4eacc;
     text-shadow: 0 0 12px #000000, 0 0 12px #000000, 0 0 12px #000000, 0 0 12px #000000, 0 0 12px #000000; }
+  .bg .session {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.5rem;
+    color: #331832;
+    font-weight: 900;
+    text-shadow: 0 0 5px #e4eacc, 0 0 5px #e4eacc, 0 0 15px #e4eacc; }
+  .bg .timer {
+    text-align: center;
+    padding: 70px 0 0;
+    font-size: 2rem;
+    color: #e4eacc; }
+    .bg .timer #minute {
+      padding: 50px 80px;
+      background: rgba(210, 162, 98, 0.6);
+      margin-right: 50px; }
+    .bg .timer #seconds {
+      padding: 50px 80px;
+      background: rgba(210, 162, 98, 0.6);
+      margin-left: 50px; }
+    .bg .timer #colon {
+      color: #a30b37; }
 
 @media (max-width: 540px) {
   .bg {
     height: 90vh;
-    background: rgba(228, 234, 204, 0.4);
     padding: 70px 50px; }
     .bg h1 {
-      font-size: 1.2rem; } }
+      font-size: 1.2rem; }
+    .bg .session {
+      font-size: 1rem; }
+    .bg .timer {
+      font-size: 1rem;
+      padding: 30px 0 0; }
+      .bg .timer #minute {
+        padding: 10px 20px;
+        margin-right: 20px; }
+      .bg .timer #seconds {
+        padding: 10px 20px;
+        margin-left: 20px; } }
+
+@media (min-width: 541px) and (max-width: 768px) {
+  .bg h1 {
+    font-size: 2rem; }
+  .bg .timer {
+    font-size: 1rem;
+    padding: 45px 0 0; }
+    .bg .timer #minute {
+      padding: 20px 40px;
+      margin-right: 30px; }
+    .bg .timer #seconds {
+      padding: 20px 40px;
+      margin-left: 30px; } }
