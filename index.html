@@ -10,11 +10,28 @@
 <body>
 	<div class="bg">
 		<h1> POMODORO CLOCK </h1>
-		<p class="session"> SESSION </p>
+		<p class="type"> SESSION </p>
 		<div class="timer">
 			<h2> <span id="minute">25</span><span id="colon">:</span><span id="seconds">00</span></h2>
 		</div>
+		<div class="controllers">
+			<fieldset class="session">
+				<legend> SESSION </legend>
+				<i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>
+				<span class="number" value="25">25</span>
+				<i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
+			</fieldset>
+			<fieldset class="session">
+				<legend> BREAK </legend>
+				<i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>
+				<span class="number" value="25">5</span>
+				<i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
+			</fieldset>
+			<button type="button" id="startBtn" value="start">START</button>
+			<button type="button" id="resetBtn" value="reset">RESET</button>
+		</div>
 	</div>
+	<script src="https://use.fontawesome.com/6796ee1f32.js"></script>
 	<script src="scripts/script.js"></script>
 </body>
 </html>

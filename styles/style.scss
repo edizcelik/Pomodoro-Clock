@@ -22,8 +22,21 @@ body {
 	font-weight: bold;
 }
 
+fieldset {
+	border-color: $darkpurple;
+	padding: 0;
+	margin: 0;
+	legend {
+		padding: 0 5px;
+		color: $bone;
+		text-shadow: 0 0 5px darken($raspberry, 25%),
+					 0 0 5px darken($raspberry, 25%),
+					 0 0 5px darken($raspberry, 15%);
+	}
+}
+
 .bg {
-	width: 90vw; height: 75vh;
+	width: 90vw;
 	max-width: 1200px;
 	margin: auto;
 	position: relative;
@@ -44,7 +57,7 @@ body {
 					 0 0 12px #000000,
 					 0 0 12px #000000;
 	}
-	.session {
+	.type {
 		text-align: center;
 		margin-top: 30px;
 		font-size: 1.5rem;
@@ -59,18 +72,57 @@ body {
 		padding: 70px 0 0;
 		font-size: 2rem;
 		color: $bone;
-		#minute{
+		#minute {
 			padding: 50px 80px;
 			background: rgba($brownish, 0.6);
 			margin-right: 50px;
 		}
-		#seconds{
+		#seconds {
 			padding: 50px 80px;
 			background: rgba($brownish, 0.6);
 			margin-left: 50px;
 		}
-		#colon{
+		#colon {
 			color: $raspberry;
+		}
+	}
+	.controllers {
+		padding: 100px 0 0;
+		display: flex;
+		justify-content: space-between;
+		.session {
+			flex: 1 1 150px;
+			max-width: 150px;
+			position:relative;
+			text-align: center;
+			padding:8px 20px 20px;
+			span {
+				font-size: 1.5rem;
+				padding: 0 5px;
+				color: $raspberry;
+			}
+			i {
+				position: relative;
+				top: -3px;
+				color: darken($greenish, 18%);
+				font-size: 1.1rem;
+				cursor: pointer;
+			}
+		}
+		button {
+			max-width: 150px;
+			flex: 1 1 150px;
+			border: 0;
+			color: $bone;
+			font-size: 1.4rem;
+			font-weight: bold;
+			cursor: pointer;
+		}
+		#startBtn {
+			background: $darkpurple;
+		}
+		#resetBtn {
+			background: $raspberry;
 		}
 	}
 
@@ -78,12 +130,12 @@ body {
 
 @media (max-width: 540px) {
 	.bg {
-		height: 90vh;
-		padding: 70px 50px;
+		padding: 50px 20px;
 		h1 {
 			font-size: 1.2rem;
+			padding-bottom: 30px;
 		}
-		.session {
+		.type {
 			font-size: 1rem;
 		}
 		.timer {
@@ -98,10 +150,35 @@ body {
 				margin-left: 20px;
 			}
 		}
+		.controllers {
+			padding: 30px 0 0;
+			.session {
+				flex: 1 1 50px;
+				max-width: 50px;
+				padding: 3px 5px 5px;
+				span {
+					font-size: 0.8rem;
+					padding: 0;
+				}
+				i {
+					top: -1px;
+					font-size: 0.7rem;
+				}
+			}
+			button {
+				max-width: 50px;
+				flex: 1 1 50px;
+				font-size: 0.5rem;
+			}
+
+		}
+	}
+	legend {
+		font-size: 0.5rem;
 	}
 }
 
-@media (min-width: 541px) and (max-width: 768px) {
+@media (min-width: 541px) and (max-width: 769px) {
 	.bg {
 		h1 {
 			font-size: 2rem;
@@ -109,14 +186,36 @@ body {
 		.timer {
 			font-size: 1rem;
 			padding: 45px 0 0;
-			#minute{
+			#minute {
 				padding: 20px 40px;
 				margin-right: 30px;
 			}
-			#seconds{
+			#seconds {
 				padding: 20px 40px;
 				margin-left: 30px;
 			}
+		}
+		.controllers {
+			padding: 60px 0 0;
+			.session {
+				flex: 1 1 100px;
+				max-width: 100px;
+				padding: 3px 5px 5px;
+				span {
+					font-size: 1rem;
+					padding: 0px 5px;
+				}
+				i {
+					top: -1px;
+					font-size: 1rem;
+				}
+			}
+			button {
+				max-width: 50px;
+				flex: 1 1 50px;
+				font-size: 0.5rem;
+			}
+			
 		}
 	}
 

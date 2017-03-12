@@ -13,9 +13,17 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight: bold; }
 
+fieldset {
+  border-color: #331832;
+  padding: 0;
+  margin: 0; }
+  fieldset legend {
+    padding: 0 5px;
+    color: #e4eacc;
+    text-shadow: 0 0 5px #2c030f, 0 0 5px #2c030f, 0 0 5px #5b061f; }
+
 .bg {
   width: 90vw;
-  height: 75vh;
   max-width: 1200px;
   margin: auto;
   position: relative;
@@ -32,7 +40,7 @@ body {
     border-bottom: 3px solid #689888;
     color: #e4eacc;
     text-shadow: 0 0 12px #000000, 0 0 12px #000000, 0 0 12px #000000, 0 0 12px #000000, 0 0 12px #000000; }
-  .bg .session {
+  .bg .type {
     text-align: center;
     margin-top: 30px;
     font-size: 1.5rem;
@@ -54,14 +62,54 @@ body {
       margin-left: 50px; }
     .bg .timer #colon {
       color: #a30b37; }
+  .bg .controllers {
+    padding: 100px 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .bg .controllers .session {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1 150px;
+              flex: 1 1 150px;
+      max-width: 150px;
+      position: relative;
+      text-align: center;
+      padding: 8px 20px 20px; }
+      .bg .controllers .session span {
+        font-size: 1.5rem;
+        padding: 0 5px;
+        color: #a30b37; }
+      .bg .controllers .session i {
+        position: relative;
+        top: -3px;
+        color: #436257;
+        font-size: 1.1rem;
+        cursor: pointer; }
+    .bg .controllers button {
+      max-width: 150px;
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1 150px;
+              flex: 1 1 150px;
+      border: 0;
+      color: #e4eacc;
+      font-size: 1.4rem;
+      font-weight: bold;
+      cursor: pointer; }
+    .bg .controllers #startBtn {
+      background: #331832; }
+    .bg .controllers #resetBtn {
+      background: #a30b37; }
 
 @media (max-width: 540px) {
   .bg {
-    height: 90vh;
-    padding: 70px 50px; }
+    padding: 50px 20px; }
     .bg h1 {
-      font-size: 1.2rem; }
-    .bg .session {
+      font-size: 1.2rem;
+      padding-bottom: 30px; }
+    .bg .type {
       font-size: 1rem; }
     .bg .timer {
       font-size: 1rem;
@@ -71,9 +119,31 @@ body {
         margin-right: 20px; }
       .bg .timer #seconds {
         padding: 10px 20px;
-        margin-left: 20px; } }
+        margin-left: 20px; }
+    .bg .controllers {
+      padding: 30px 0 0; }
+      .bg .controllers .session {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 50px;
+                flex: 1 1 50px;
+        max-width: 50px;
+        padding: 3px 5px 5px; }
+        .bg .controllers .session span {
+          font-size: 0.8rem;
+          padding: 0; }
+        .bg .controllers .session i {
+          top: -1px;
+          font-size: 0.7rem; }
+      .bg .controllers button {
+        max-width: 50px;
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 50px;
+                flex: 1 1 50px;
+        font-size: 0.5rem; }
+  legend {
+    font-size: 0.5rem; } }
 
-@media (min-width: 541px) and (max-width: 768px) {
+@media (min-width: 541px) and (max-width: 769px) {
   .bg h1 {
     font-size: 2rem; }
   .bg .timer {
@@ -84,4 +154,24 @@ body {
       margin-right: 30px; }
     .bg .timer #seconds {
       padding: 20px 40px;
-      margin-left: 30px; } }
+      margin-left: 30px; }
+  .bg .controllers {
+    padding: 60px 0 0; }
+    .bg .controllers .session {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1 100px;
+              flex: 1 1 100px;
+      max-width: 100px;
+      padding: 3px 5px 5px; }
+      .bg .controllers .session span {
+        font-size: 1rem;
+        padding: 0px 5px; }
+      .bg .controllers .session i {
+        top: -1px;
+        font-size: 1rem; }
+    .bg .controllers button {
+      max-width: 50px;
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1 50px;
+              flex: 1 1 50px;
+      font-size: 0.5rem; } }
