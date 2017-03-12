@@ -1,0 +1,26 @@
+{
+  "name": "pomodoroclock",
+  "version": "1.0.0",
+  "description": "Pomodoro clock is an app created as a freeCodeCamp challenge. It is a timer for time management technique with the same name, the Pomodoro Technique. The principle with this technique is to break down work (or studying) into intervals. Default is a work session of 25 min and 5 min of break. App allows user to manually adjust durations of sessions and breaks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edizcelik/Pomodoro-Clock.git"
+  },
+  "author": "mr.edizcelik@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edizcelik/Pomodoro-Clock/issues"
+  },
+  "homepage": "https://github.com/edizcelik/Pomodoro-Clock#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
