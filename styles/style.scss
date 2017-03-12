@@ -1,0 +1,59 @@
+$greenish: #689888;
+$bone: #e4eacc;
+$brownish: #d2a262;
+$raspberry: #a30b37;
+$darkpurple: #331832;
+
+html {
+	box-sizing: border-box;
+	font-size: 18px;
+}
+
+*, *:after, *:before {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	background: lighten($brownish, 25%);
+	background: url('../design/bg.png') no-repeat;
+	background-size: 100vw 100vh;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+}
+
+.bg {
+	width: 90vw; height: 75vh;
+	max-width: 1200px;
+	position: relative;
+	top: 50vh;
+	transform: translateY(-50%);
+	margin: auto;
+	background: rgba($bone, 0.4);
+	padding: 70px 100px;
+	h1 {
+		font-family: 'Raleway', sans-serif;
+		font-size: 3rem;
+		text-align: center;
+		padding-bottom: 70px;
+		border-bottom: 3px solid $greenish;
+		color: $bone;
+		text-shadow: 0 0 12px #000000,
+					 0 0 12px #000000,
+					 0 0 12px #000000,
+					 0 0 12px #000000,
+					 0 0 12px #000000;
+	}
+
+}
+
+@media (max-width: 540px) {
+	.bg {
+		height: 90vh;
+		background: rgba($bone, 0.4);
+		padding: 70px 50px;
+		h1 {
+			font-size: 1.2rem;
+		}
+	}
+}
