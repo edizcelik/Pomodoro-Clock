@@ -3,18 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Pomodoro Clock</title>
+	<title>Pomodoro Timer</title>
 	<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
 	<link rel="stylesheet" href="styles/style.css">
 
 	<script src="https://use.fontawesome.com/6796ee1f32.js"></script>
 </head>
-<body ng-app="pomodoro">
+<body>
     <audio>
-	      <source src="http://www.myinstants.com/media/sounds/alert-hq.mp3"></source>
+	      <source src="sounds/victory.mp3"></source>
     </audio>
-	<div class="bg" ng-controller="clock">
-		<h1> POMODORO CLOCK </h1>
+    <audio>
+	      <source src="sounds/airhorn.mp3"></source>
+    </audio>
+	<div class="bg">
+		<h1> POMODORO TIMER </h1>
 		<p class="type"> SESSION </p>
 		<div class="timer">
 			<h2> <span id="minute">25</span><span id="colon">:</span><span id="seconds">00</span></h2>
