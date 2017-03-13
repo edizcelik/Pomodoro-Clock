@@ -15,8 +15,8 @@ html {
 }
 
 body {
-	background: lighten($brownish, 50%);
-	background-image: url("https://github.com/edizcelik/Pomodoro-Clock/blob/master/design/bg.png");
+	background: lighten($brownish, 10%);
+	background-image: url("../design/bg.png");
 	background-repeat: no-repeat;
 	background-size: 100vw 100vh;
 	font-family: 'Lato', sans-serif;
