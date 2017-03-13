@@ -15,8 +15,9 @@ html {
 }
 
 body {
-	background: lighten($brownish, 25%);
-	background: url('../design/bg.png') no-repeat;
+	background: lighten($brownish, 50%);
+	background-image: url("https://github.com/edizcelik/Pomodoro-Clock/blob/master/design/bg.png");
+	background-repeat: no-repeat;
 	background-size: 100vw 100vh;
 	font-family: 'Lato', sans-serif;
 	font-weight: bold;
@@ -57,7 +58,7 @@ fieldset {
 					 0 0 12px #000000,
 					 0 0 12px #000000;
 	}
-	
+
 	.type {
 		text-align: center;
 		margin-top: 30px;
