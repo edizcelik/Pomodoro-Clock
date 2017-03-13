@@ -23,7 +23,7 @@ let minutes = 25;
 let count;
 
 /* Up and Down Buttons to adjust session & break durations */
-sessionDown.addEventListener('click', () => {
+sessionDown.addEventListener('touchstart click', () => {
 	if (!pauseFlag) {
 		if (sessionTime > 1) {
 			sessionTime--;
@@ -40,7 +40,7 @@ sessionDown.addEventListener('click', () => {
 		}
 	}
 });
-sessionUp.addEventListener('click', () => {
+sessionUp.addEventListener('touchstart click', () => {
 	if (!pauseFlag) {
 			sessionTime++;
 			numbers[0].textContent = sessionTime;
@@ -55,7 +55,7 @@ sessionUp.addEventListener('click', () => {
 			screenSecond.textContent = '0' + seconds;
 	}	
 });
-breakDown.addEventListener('click', () => {
+breakDown.addEventListener('touchstart click', () => {
 	if (!pauseFlag) {
 		if (breakTime > 1) {
 			breakTime--;
@@ -72,7 +72,7 @@ breakDown.addEventListener('click', () => {
 		}
 	}
 });
-breakUp.addEventListener('click', () => {
+breakUp.addEventListener('touchstart click', () => {
 	if (!pauseFlag) {
 			breakTime++;
 			numbers[1].textContent = breakTime;
@@ -89,7 +89,7 @@ breakUp.addEventListener('click', () => {
 });
 
 /* Start Btn */
-startBtn.addEventListener('click', function(){
+startBtn.addEventListener('touchstart click', function(){
 	if (!pauseFlag) {
 		startBtn.textContent = "PAUSE";
 		count = setInterval(countdown, 1000);
@@ -103,7 +103,7 @@ startBtn.addEventListener('click', function(){
 });
 
 /* Reset Btn */
-resetBtn.addEventListener('click', function(){
+resetBtn.addEventListener('touchstart click', function(){
 	pauseFlag = false;
 	startBtn.textContent = "START";
 	clearInterval(count);
