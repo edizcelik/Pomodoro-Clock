@@ -6,32 +6,37 @@
 	<title>Pomodoro Clock</title>
 	<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
 	<link rel="stylesheet" href="styles/style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+	<script src="https://use.fontawesome.com/6796ee1f32.js"></script>
 </head>
-<body>
-	<div class="bg">
+<body ng-app="pomodoro">
+    <audio>
+	      <source src="http://www.myinstants.com/media/sounds/alert-hq.mp3"></source>
+    </audio>
+	<div class="bg" ng-controller="clock">
 		<h1> POMODORO CLOCK </h1>
 		<p class="type"> SESSION </p>
 		<div class="timer">
-			<h2> <span id="minute">25</span><span id="colon">:</span><span id="seconds">00</span></h2>
+			<h2> <span id="minute">{{minute}}</span><span id="colon">:</span><span id="seconds">{{second}}</span></h2>
 		</div>
 		<div class="controllers">
 			<fieldset class="session">
 				<legend> SESSION </legend>
-				<i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>
-				<span class="number" value="25">25</span>
-				<i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
+				<i id="session-down" class="fa fa-arrow-circle-o-down" aria-hidden="true" ng-click="sessionTime = sessionTime - 1"></i>
+				<span class="number">{{sessionTime}}</span>
+				<i id="session-up" class="fa fa-arrow-circle-o-up" aria-hidden="true" ng-click="sessionTime = sessionTime + 1"></i>
 			</fieldset>
 			<fieldset class="session">
 				<legend> BREAK </legend>
-				<i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>
-				<span class="number" value="25">5</span>
-				<i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
+				<i id="break-down" class="fa fa-arrow-circle-o-down" aria-hidden="true" ng-click="breakTime = breakTime - 1"></i>
+				<span class="number">{{breakTime}}</span>
+				<i id="break-up" class="fa fa-arrow-circle-o-up" aria-hidden="true" ng-click="breakTime = breakTime + 1"></i>
 			</fieldset>
-			<button type="button" id="startBtn" value="start">START</button>
-			<button type="button" id="resetBtn" value="reset">RESET</button>
+			<button type="button" id="startBtn" value="start" ng-click="start()">START</button>
+			<button type="button" id="resetBtn" value="reset" ng-click="reset()">RESET</button>
 		</div>
 	</div>
-	<script src="https://use.fontawesome.com/6796ee1f32.js"></script>
 	<script src="scripts/script.js"></script>
 </body>
 </html>

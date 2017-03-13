@@ -55,11 +55,13 @@ fieldset {
     .bg .timer #minute {
       padding: 50px 80px;
       background: rgba(210, 162, 98, 0.6);
-      margin-right: 50px; }
+      margin-right: 50px;
+      letter-spacing: 3px; }
     .bg .timer #seconds {
       padding: 50px 80px;
       background: rgba(210, 162, 98, 0.6);
-      margin-left: 50px; }
+      margin-left: 50px;
+      letter-spacing: 3px; }
     .bg .timer #colon {
       color: #a30b37; }
   .bg .controllers {
